@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub PR [WIP] Toggle",
+  "version": "1.0.0",
+  "description": "GitHub の Pull Request タイトルに [WIP] を付けたり外したりするボタンを追加します（GitHub の編集UIをDOM操作で自動実行、APIトークン不要）。",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*/pull/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
